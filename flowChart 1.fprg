@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowaa"/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-24 09:57:13 pm"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtERVNLVE9QLUlWSFJMOVY7MjAyNi0xMC0yNDswNDoxMDoxMyBwbTszODI2"/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtERVNLVE9QLUlWSFJMOVY7MjAyNi0xMC0yNDswOTo1NzoxMyBwbTsyOzM5NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ageYears" type="Integer" array="False" size=""/>
+            <declare name="dangerSign" type="Boolean" array="False" size=""/>
+            <declare name="caseID, community, reportTime, name" type="String" array="False" size=""/>
+            <input variable="caseID"/>
+            <input variable="name"/>
+            <input variable="ageYears"/>
+            <input variable="community"/>
+            <if expression="ageYears &lt;= 5">
+                <then>
+                    <output expression="&quot;Fever, Headache, and Sweating&quot;" newline="True"/>
+                    <input variable="dangerSign"/>
+                    <if expression="dangerSign = True">
+                        <then>
+                            <output expression="&quot;Refer immediately&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Arrange promt assessment&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Use the correct referal process&quot;" newline="True"/>
+                </else>
+            </if>
+            <input variable="reportTime"/>
+        </body>
+    </function>
+</flowgorithm>
