@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowaa"/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-24 10:15:39 pm"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtERVNLVE9QLUlWSFJMOVY7MjAyNi0xMC0yNDswNDoxMDoxMyBwbTszODI2"/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtERVNLVE9QLUlWSFJMOVY7MjAyNi0xMC0yNDsxMDoxNTozOSBwbTszOzM5NDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="reachCare" type="Boolean" array="False" size=""/>
+            <declare name="status, caseID" type="String" array="False" size=""/>
+            <input variable="caseID"/>
+            <output expression="&quot;Enter referral completion (True/False)&quot;" newline="True"/>
+            <input variable="reachCare"/>
+            <if expression="reachCare = True">
+                <then>
+                    <assign variable="status" expression="&quot;CLOSED&quot;"/>
+                    <output expression="&quot;Referral completed;status:&quot;&amp; status" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="status" expression="&quot;PENDING&quot;"/>
+                    <output expression="&quot;Folloe-up required;status:&quot; &amp; status" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
